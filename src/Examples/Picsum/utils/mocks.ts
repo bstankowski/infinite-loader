@@ -1,0 +1,125 @@
+import { PicsumResponse } from "../types";
+
+export const picsumPrevPageHeader = '<https://picsum.photos/v2/list?page=1&limit=10>; rel="prev"';
+export const picsumNextPageHeader = '<https://picsum.photos/v2/list?page=3&limit=10>; rel="next"';
+
+export const DUMMY_LAST_PAGE = {
+    data: [
+        {
+            id: "10",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/6J--NXulQCs",
+            download_url: "https://picsum.photos/id/10/2500/1667",
+        },
+        {
+            id: "11",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/Cm7oKel-X2Q",
+            download_url: "https://picsum.photos/id/11/2500/1667",
+        },
+        {
+            id: "12",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/I_9ILwtsl_k",
+            download_url: "https://picsum.photos/id/12/2500/1667",
+        },
+        {
+            id: "13",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/3MtiSMdnoCo",
+            download_url: "https://picsum.photos/id/13/2500/1667",
+        },
+        {
+            id: "14",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/IQ1kOQTJrOQ",
+            download_url: "https://picsum.photos/id/14/2500/1667",
+        },
+        {
+            id: "15",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/NYDo21ssGao",
+            download_url: "https://picsum.photos/id/15/2500/1667",
+        },
+        {
+            id: "16",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/gkT4FfgHO5o",
+            download_url: "https://picsum.photos/id/16/2500/1667",
+        },
+        {
+            id: "17",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/Ven2CV8IJ5A",
+            download_url: "https://picsum.photos/id/17/2500/1667",
+        },
+        {
+            id: "18",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/Ps2n0rShqaM",
+            download_url: "https://picsum.photos/id/18/2500/1667",
+        },
+        {
+            id: "19",
+            author: "Paul Jarvis",
+            width: 2500,
+            height: 1667,
+            url: "https://unsplash.com/photos/P7Lh0usGcuk",
+            download_url: "https://picsum.photos/id/19/2500/1667",
+        },
+    ],
+    status: 200,
+    statusText: "",
+    headers: {
+        "cache-control": "private, no-cache, no-store, must-revalidate",
+        "content-type": "application/json",
+        link: [picsumPrevPageHeader, picsumNextPageHeader].join(", "),
+    },
+    config: {
+        transitional: {
+            silentJSONParsing: true,
+            forcedJSONParsing: true,
+            clarifyTimeoutError: false,
+        },
+        adapter: ["xhr", "http"],
+        transformRequest: [null],
+        transformResponse: [null],
+        timeout: 0,
+        xsrfCookieName: "XSRF-TOKEN",
+        xsrfHeaderName: "X-XSRF-TOKEN",
+        maxContentLength: -1,
+        maxBodyLength: -1,
+        env: {},
+        headers: {
+            Accept: "application/json, text/plain, */*",
+        },
+        method: "get",
+        url: "https://picsum.photos/v2/list?limit=10&page=2",
+    },
+    request: {
+        method: "GET",
+        requestURL: "https://picsum.photos/v2/list?limit=10&page=2",
+        requestHeaders: {
+            Accept: "application/json, text/plain, */*",
+        },
+        requestData: null,
+    },
+} as unknown as PicsumResponse;

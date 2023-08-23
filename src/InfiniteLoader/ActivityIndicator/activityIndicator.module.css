@@ -1,0 +1,30 @@
+.activityIndicator {
+    --size: 24px;
+
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    padding: 10px;
+}
+
+.activityIndicator span {
+    display: block;
+    overflow: hidden;
+    width: var(--size);
+    height: var(--size);
+    border: 3px solid #83c7ff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+    text-indent: -1000em;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
