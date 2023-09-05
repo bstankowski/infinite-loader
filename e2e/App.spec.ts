@@ -18,7 +18,7 @@ test.describe("Usage examples", () => {
         await expect(page.getByRole("heading", { name: titles.picsum })).not.toBeVisible();
     });
 
-    test("should load next page when user scrolls to the end of page", async ({ page }) => {
+    test("should load next page when user scrolls to the end", async ({ page }) => {
         await page.goto("/");
 
         await expect(page.getByRole("heading", { name: titles.sw })).toBeVisible();

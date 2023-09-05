@@ -16,15 +16,15 @@ function useInfiniteLoader<DataType>({
 }: Omit<InfiniteLoaderProps<DataType>, "children">) {
     const { ref: nextPageObserver, inView: nextPageInView } = useInView({
         root: intersectionRoot,
+        // Added a small margin to the root element
+        // to trigger page load before the user reaches
+        // end of the view, to improve perceived performance.
         rootMargin: "0px 0px 100px 0px",
     });
 
     const { ref: prevPageObserver, inView: prevPageInView } = useInView({
         root: intersectionRoot,
-        // Added a small bottom margin to the root element
-        // to trigger next page load before the user reaches
-        // end of the view, to improve perceived performance.
-        rootMargin: "0px 0px 100px 0px",
+        rootMargin: "100px 0px 0px 0px",
     });
 
     const {
